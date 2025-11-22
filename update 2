@@ -1,0 +1,56 @@
+package bmicalculator;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class BMICalculator extends JFrame {
+
+    private JTextField weightField, heightField;
+
+    public BMICalculator() {
+
+        setTitle("BMI Calculator");
+        setSize(420, 350);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(null);
+
+        JLabel weightLabel = new JLabel("Enter Weight (kg):");
+        weightLabel.setBounds(30, 30, 150, 25);
+        add(weightLabel);
+
+        weightField = new JTextField();
+        weightField.setBounds(200, 30, 150, 25);
+        add(weightField);
+
+        JLabel heightLabel = new JLabel("Enter Height (m):");
+        heightLabel.setBounds(30, 75, 150, 25);
+        add(heightLabel);
+
+        heightField = new JTextField();
+        heightField.setBounds(200, 75, 150, 25);
+        add(heightField);
+
+        JButton calcButton = new JButton("Calculate BMI");
+        calcButton.setBounds(30, 125, 150, 35);
+        calcButton.setBackground(new Color(46, 139, 87));
+        calcButton.setForeground(Color.WHITE);
+        add(calcButton);
+
+        JButton resetButton = new JButton("Reset");
+        resetButton.setBounds(200, 125, 150, 35);
+        resetButton.setBackground(new Color(220, 20, 60));
+        resetButton.setForeground(Color.WHITE);
+        add(resetButton);
+        
+        setVisible(true);
+    }
+        
+        public static void main(String[] args) {
+            new BMICalculator();
+        }
+    }
+
+
+
+
